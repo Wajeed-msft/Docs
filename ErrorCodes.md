@@ -1,4 +1,14 @@
-## Area: Device Capabilities
+
+<summary><b>Device Capabilities</b></summary>
+
+| **Error message** | **Scenario** | **Resolution** |
+| -------- | --------- | ----------------|
+| No Error Code   Unable to launch camera in android mobile using the provided React-js code snippet. | The developer is trying to launch the camera and gallery on both android and iPhone using a React-js code snippet in a Microsoft Teams app. The camera does not open on Android, only the gallery opens without multiple selection, while it works fine on iPhone. | Ensure that the necessary camera and storage permissions are granted on the Android device. Check the app's permission settings and make sure the camera and storage permissions are enabled. If the issue persists, consider debugging the code to identify any potential issues specific to Android. |
+
+</details>
+
+
+</br>## Area: Device Capabilities
 ### Error Message: No Error Code   Unable to launch camera in android mobile using the provided React-js code snippet.
 ### Scenario: The developer is trying to launch the camera and gallery on both android and iPhone using a React-js code snippet in a Microsoft Teams app. The camera does not open on Android, only the gallery opens without multiple selection, while it works fine on iPhone.
 ### Remediation: Ensure that the necessary camera and storage permissions are granted on the Android device. Check the app's permission settings and make sure the camera and storage permissions are enabled. If the issue persists, consider debugging the code to identify any potential issues specific to Android.

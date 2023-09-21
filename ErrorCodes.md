@@ -23,6 +23,26 @@
 
 <br>
 
+##  Bots
+
+| **Area** | **Scenario** | **Resolution** |
+| -------- | --------- | ----------------|
+| ServiceError Could not find Connection Setting with name teamsAuth | The developer was trying to add SSO for a notification bot using Teams Toolkit. Despite following the documentation and adding the OAuth connection in the bot, the developer was encountering an error stating that the connection setting 'teamsAuth' could not be found. | Ensure that the OAuth connection name is correctly added to the .env file as mentioned in the documentation. If the issue persists, try using the TeamsBotSSOPrompt function by registering an AAD App for bot authentication. If the problem still persists, consider filing an issue in the TeamsFx repo for further assistance. |
+| BadArgument   Unknown attachment type | The developer is trying to attach a PDF file to a Microsoft Teams bot and encounters an error. | The developer should check the sample code for file sharing on MS Teams provided by Microsoft. Additionally, the 'supportsFiles' option needs to be enabled in the manifest for the bot to support file attachments. |
+
+<br>
+
+##  Developer Portal
+
+| **Area** | **Scenario** | **Resolution** |
+| -------- | --------- | ----------------|
+| Message: Manifest Error   Manifest is invalid due to missing 'name.short' and 'name.full' properties in the localization file | The developer was trying to upload the manifest for a Teams app with localization. The Teams app started throwing an error stating that the manifest is invalid due to missing 'name.short' and 'name.full' properties in the localization file. | Add 'name.short' and 'name.full' properties to the localization file. Even if the name of the application is not localizable, these fields are required in the localization file. |
+
+<br>
+
+
+
+
 ## Area: Device Capabilities
 ### Error Message: No Error Code   Unable to launch camera in android mobile using the provided React-js code snippet.
 ### Scenario: The developer is trying to launch the camera and gallery on both android and iPhone using a React-js code snippet in a Microsoft Teams app. The camera does not open on Android, only the gallery opens without multiple selection, while it works fine on iPhone.

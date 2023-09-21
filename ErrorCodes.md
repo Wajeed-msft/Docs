@@ -5,12 +5,15 @@
 | -------- | --------- | ----------------|
 | Device capabilities | The developer is trying to launch the camera and gallery on both android and iPhone using a React-js code snippet in a Microsoft Teams app. The camera does not open on Android, only the gallery opens without multiple selection, while it works fine on iPhone. | Ensure that the necessary camera and storage permissions are granted on the Android device. Check the app's permission settings and make sure the camera and storage permissions are enabled. If the issue persists, consider debugging the code to identify any potential issues specific to Android. |
 
+<br>
+
 ## Bad Request - Error in query syntax. The error occurred while trying to get detailed user information using GetUserProfile() in Microsoft Power Virtual Agents Flow Template
 
 | **Area** | **Scenario** | **Resolution** |
 | -------- | --------- | ----------------|
 | Bots | The developer was trying to get detailed user information using Microsoft Power Virtual Agents in Microsoft Teams. The error occurred when the developer tried to use GetUserProfile() function with the input as 'first(outputs('Search_for_users_(V2)')?['body/value'])?['UserPrincipalName']'. | Ensure that the necessary camera and storage permissions are granted on the Android device. Check the app's permission settings and make sure the camera and storage permissions are enabled. If the issue persists, consider debugging the code to identify any potential issues specific to Android. |
 
+<br>
 
 ##  Message: Manifest Error   Manifest is invalid due to missing 'name.short' and 'name.full' properties in the localization file
 
@@ -18,7 +21,7 @@
 | -------- | --------- | ----------------|
 | Developer Portal | The developer was trying to upload the manifest for a Teams app with localization. The Teams app started throwing an error stating that the manifest is invalid due to missing 'name.short' and 'name.full' properties in the localization file. | Add 'name.short' and 'name.full' properties to the localization file. Even if the name of the application is not localizable, these fields are required in the localization file. |
 
-
+<br>
 
 ## Area: Device Capabilities
 ### Error Message: No Error Code   Unable to launch camera in android mobile using the provided React-js code snippet.

@@ -1,3 +1,46 @@
+##  Apps in Meetings
+
+| **Error message** | **Scenario** | **Resolution** |
+| -------- | --------- | ----------------|
+| No specific error code   Session ID changes every time the page is reloaded in the custom app on MS Teams Desktop App. | A custom app in Microsoft Teams Desktop App, which uses Cookies and a session id to keep track of temporary settings for tasks, is experiencing an issue where the session ID changes every time the page is reloaded. |
+| BadArgument   Unknown attachment type | The developer is trying to attach a PDF file to a Microsoft Teams bot and encounters an error. | Avoid using cookies in Teams apps as they can cause issues when switching between Desktop and Web or different devices. Instead, store state server-side in a database or other store, keyed on the user's AadObject Id (their unique Azure Active Directory user guid), which remains consistent across all platforms. |
+
+<br>
+
+
+##  Bots
+
+| **Error message** | **Scenario** | **Resolution** |
+| -------- | --------- | ----------------|
+| ServiceError Could not find Connection Setting with name teamsAuth | The developer was trying to add SSO for a notification bot using Teams Toolkit. Despite following the documentation and adding the OAuth connection in the bot, the developer was encountering an error stating that the connection setting 'teamsAuth' could not be found. | Ensure that the OAuth connection name is correctly added to the .env file as mentioned in the documentation. If the issue persists, try using the TeamsBotSSOPrompt function by registering an AAD App for bot authentication. If the problem still persists, consider filing an issue in the TeamsFx repo for further assistance. |
+| BadArgument   Unknown attachment type | The developer is trying to attach a PDF file to a Microsoft Teams bot and encounters an error. | The developer should check the sample code for file sharing on MS Teams provided by Microsoft. Additionally, the 'supportsFiles' option needs to be enabled in the manifest for the bot to support file attachments. |
+
+<br>
+
+##  Developer Portal
+
+| **Error message** | **Scenario** | **Resolution** |
+| -------- | --------- | ----------------|
+| Message: Manifest Error   Manifest is invalid due to missing 'name.short' and 'name.full' properties in the localization file | The developer was trying to upload the manifest for a Teams app with localization. The Teams app started throwing an error stating that the manifest is invalid due to missing 'name.short' and 'name.full' properties in the localization file. | Add 'name.short' and 'name.full' properties to the localization file. Even if the name of the application is not localizable, these fields are required in the localization file. |
+
+<br>
+
+##  Microsoft Graph
+
+| **Error message** | **Scenario** | **Resolution** |
+| -------- | --------- | ----------------|
+| PreconditionFailed   PreconditionFailed-ETag mismatch for thread store resource. | The error occurred while trying to create a group chat using the $batch API from MS Team Graph API. | Ensure that you are using the correct POST query while creating the group chat. After creating the group chat, try adding members to the chat using batch operation. |
+<br>
+
+##  Webhook and Connectors
+
+| **Error message** | **Scenario** | **Resolution** |
+| -------- | --------- | ----------------|
+| Error Message: 403   Forbidden error when trying to do an HttpPOST request via a message card, delivered via a Custom Connector. | The developer is trying to create a custom connector for their application in Teams. They are able to post message cards using PostMan, but when they try to post a message card with an Action (HttpPOST) and execute it on the click of a button, they receive a 'Failed to send' message. Further inspection reveals that an API called Execute Action is returning a 403 forbidden error. | Check the permissions for the webhook.site URL. Make sure it is added as an Action URL in the connector developer dashboard and as a valid domain in the connector manifest.json. If the issue persists, try using a different webhook.site as suggested by the Microsoft Teams support.
+. |
+
+<br>
+
 
 ## No Error Code Unable to launch camera in android mobile using the provided React-js code snippet
 
@@ -22,26 +65,6 @@
 | Developer Portal | The developer was trying to upload the manifest for a Teams app with localization. The Teams app started throwing an error stating that the manifest is invalid due to missing 'name.short' and 'name.full' properties in the localization file. | Add 'name.short' and 'name.full' properties to the localization file. Even if the name of the application is not localizable, these fields are required in the localization file. |
 
 <br>
-
-##  Bots
-
-| **Error message** | **Scenario** | **Resolution** |
-| -------- | --------- | ----------------|
-| ServiceError Could not find Connection Setting with name teamsAuth | The developer was trying to add SSO for a notification bot using Teams Toolkit. Despite following the documentation and adding the OAuth connection in the bot, the developer was encountering an error stating that the connection setting 'teamsAuth' could not be found. | Ensure that the OAuth connection name is correctly added to the .env file as mentioned in the documentation. If the issue persists, try using the TeamsBotSSOPrompt function by registering an AAD App for bot authentication. If the problem still persists, consider filing an issue in the TeamsFx repo for further assistance. |
-| BadArgument   Unknown attachment type | The developer is trying to attach a PDF file to a Microsoft Teams bot and encounters an error. | The developer should check the sample code for file sharing on MS Teams provided by Microsoft. Additionally, the 'supportsFiles' option needs to be enabled in the manifest for the bot to support file attachments. |
-
-<br>
-
-##  Developer Portal
-
-| **Error message** | **Scenario** | **Resolution** |
-| -------- | --------- | ----------------|
-| Message: Manifest Error   Manifest is invalid due to missing 'name.short' and 'name.full' properties in the localization file | The developer was trying to upload the manifest for a Teams app with localization. The Teams app started throwing an error stating that the manifest is invalid due to missing 'name.short' and 'name.full' properties in the localization file. | Add 'name.short' and 'name.full' properties to the localization file. Even if the name of the application is not localizable, these fields are required in the localization file. |
-
-<br>
-
-
-
 
 ## Area: Device Capabilities
 ### Error Message: No Error Code   Unable to launch camera in android mobile using the provided React-js code snippet.

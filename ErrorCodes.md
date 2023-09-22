@@ -7,7 +7,6 @@
 
 <br>
 
-
 ##  Bots
 
 | **Error message** | **Scenario** | **Resolution** |
@@ -40,7 +39,6 @@
 . |
 
 <br>
-
 
 ## No Error Code Unable to launch camera in android mobile using the provided React-js code snippet
 
